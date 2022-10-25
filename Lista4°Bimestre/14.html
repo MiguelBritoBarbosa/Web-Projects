@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio</title>
+
+    <style type="text/css">
+        body { font-family: Verdana, Arial, sans-serif; font-size: 12px; }
+        #placeholder { width: 250px; height: 150px; }
+        .legend table, .legend > div { height: 82px !important; opacity: 1
+        !important; left: 170px; top: 10px; width: 116px !important; }
+        .legend table { border: 1px solid #555; padding: 5px; }
+        input{
+            width: 210px;
+        }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://static.pureexample.com/js/flot/excanvas.min.js"></script>
+    <script src="http://static.pureexample.com/js/flot/jquery.flot.min.js"></script>
+    <script src="http://static.pureexample.com/js/flot/jquery.flot.pie.min.js"></script>
+    
+
+
+
+</head>
+
+<script src="./14.js"></script>
+
+<body>
+    <h1>Percentual das eleições</h1>
+
+    <input type="number" id="eleitores" placeholder="Digite o total de eleitores">
+    <br>
+    <input type="number" id="branco" placeholder="Digite o total de votos em branco">
+    <br>
+    <input type="number" id="nulos" placeholder="Digite o total de votos nulos">
+    <br>
+    <input type="number" id="validos" placeholder="Digite o total de votos válidos">
+    <br>
+    <br>
+    <button onclick="evt_GerarGrafico()">Gerar porcentagem</button>
+    <br>
+    <div id="placeholder"></div>
+
+</body>
+</html>

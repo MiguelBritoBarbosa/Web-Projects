@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicio 1</title>
+    <style type="text/css">
+        span{
+            color: red;
+        }
+        input{
+            width: 200px;
+        }
+    </style>
+
+</head>
+
+<script src="./04.js"></script>
+
+<body>
+    
+
+    <h3>Cadastre um aluno e médias bimestrais</h3>
+
+    <input type="text" name="aluno" id="aluno" placeholder="Digite o nome do aluno">
+    <br>
+    <input type="number" name="nota1" id="nota1" placeholder="Digite a nota do 1° Bimestre" max="10" min="0" >
+    <br>
+    <input type="number" name="nota2" id="nota2" placeholder="Digite a nota do 2° Bimestre" max="10" min="0" maxlength="2">
+    <br>
+    <input type="number" name="nota3" id="nota3" placeholder="Digite a nota do 3° Bimestre" max="10" min="0" maxlength="2">
+    <br>
+    <input type="number" name="nota4" id="nota4" placeholder="Digite a nota do 4° Bimestre" max="10" min="0" maxlength="2">
+    <br>
+    <br>
+    <input type="button" name="btn" id="btnEnviar" value="Gerar Média" onclick="evt_GerarMedia()">
+
+    <div id="msg"></div>
+
+
+    <select name="alunos" id="alunos" style="visibility: hidden; width: 200px;" size="10" onclick="evt_MostrarNota()">
+
+    </select>
+
+    <select name="medias" id="medias" hidden></select>
+
+</body>
+</html>
