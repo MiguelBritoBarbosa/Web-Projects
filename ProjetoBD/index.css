@@ -9,6 +9,8 @@
 .text-purple {
     color: #993399;
 }
-#validação{
+.validação{
+    font-size: 12px;
+    margin: 3px;
     color: red;
 }

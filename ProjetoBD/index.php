@@ -116,55 +116,59 @@
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
         </div>
         <div class="offcanvas-body">
-            <form action="./ControleCartão.php" class="" method="post">
+            <form action="./ControleCartão.php" id="form" method="post">
                 <p>Digite seu nome completo:</p>
                 <div class="form-floating mb-2 mt-2">
-                    <input type="text" class="form-control" id="nome" placeholder="Enter name" name="nome" required value="<?php echo $nome ?>">
+                    <input onblur="ValidarNome()" type="text" class="form-control required" id="nome" placeholder="Enter name" name="nome" value="<?php echo $nome ?>">
                     <label for="nome">Nome</label>
-                    <span id="validação"><i><u><?php if (strpos($msg, "nome") != false) {echo $msg;} ?></u></i></span>
+                    <span class="validação" style="display: none;">Nome inválido</span>
                 </div>
                 <p>Digite sua idade:</p>
                 <div class="form-floating mb-2 mt-2">
-                    <input type="number" class="form-control" id="idade" placeholder="Enter age" name="idade" required value="<?php echo $idade ?>">
+                    <input onblur="ValidarIdade()" type="text" class="form-control required" id="idade" placeholder="Enter age" name="idade" value="<?php echo $idade ?>" maxlength="3">
                     <label for="nome">Idade</label>
-                    <span id="validação"><i><u><?php if (strpos($msg, "idade") != false) {echo $msg;} ?></u></i></span>
+                    <span class="validação" style="display: none;">Idade inválida</span>
                 </div>
                 <p>Digite seu número de celular:</p>
                 <div class="form-floating mb-2 mt-2">
-                    <input type="text" class="form-control" id="celular" placeholder="Enter cell" name="celular" required onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="<?php echo $celular ?>">
+                    <input onblur="ValidarCelular()" type="text" class="form-control required" id="celular" placeholder="Enter cell" name="celular" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="<?php echo $celular ?>" maxlength="15">
                     <label for="celular">Celular</label>
-                    <span id="validação"><i><u><?php if (strpos($msg, "celular") != false) {echo $msg;} ?></u></i></span>
+                    <span class="validação" style="display: none;">Número de celular inválido</span>
                 </div>
                 <p>Digite seu email:</p>
                 <div class="form-floating mb-2 mt-2">
-                    <input type="text" class="form-control" id="email" placeholder="Enter email" name="email" required value="<?php echo $email ?>">
+                    <input onblur="ValidarEmail()" type="text" class="form-control required" id="email" placeholder="Enter email" name="email" value="<?php echo $email ?>">
                     <label for="email">Email</label>
-                    <span id="validação"><i><u><?php if (strpos($msg, "email") != false) {echo $msg;} ?></u></i></span>
+                    <span class="validação" style="display: none;">Email inválido</span>
                 </div>
                 <p>Digite seu cpf:</p>
                 <div class="form-floating mb-2 mt-2">
-                    <input oninput="mascara(this)" type="text" class="form-control" id="cpf" placeholder="Enter cpf" name="cpf" required maxlength="11" value="<?php echo $cpf ?>">
+                    <input oninput="mascara(this)" onblur="ValidarCPF()" type="text" class="form-control required" id="cpf" placeholder="Enter cpf" name="cpf" maxlength="11" value="<?php echo $cpf ?>">
                     <label for="cpf">CPF</label>
-                    <span id="validação"><i><u><?php if (strpos($msg, "cpf") != false) {echo $msg;} ?></u></i></span>
+                    <span class="validação" style="display: none;">CPF inválido</span>
                 </div>
                 <p>Digite seu Serasa Score:</p>
                 <div class="form-floating mb-2 mt-2">
-                    <input type="number" class="form-control" id="Sscore" placeholder="Enter Score" name="Sscore" required value="<?php echo $SerasaScore ?>">
+                    <input onblur="ValidarSscore()" type="text" class="form-control required" id="Sscore" placeholder="Enter Score" name="Sscore" value="<?php echo $SerasaScore ?>" maxlength="4">
                     <label for="Sscore">Serasa Score</label>
-                    <span id="validação"><i><u><?php if (strpos($msg, "Serasa") != false) {echo $msg;} ?></u></i></span>
+                    <span class="validação" style="display: none;">Serasa Score inválido</span>
                 </div>
                 <p>Digite seu Salário:</p>
                 <div class="form-floating mb-2 mt-2">
-                    <input type="text" class="form-control" id="salario" placeholder="Enter Salary" name="salario" required value="<?php echo $salario ?>">
+                    <input onblur="ValidarSalario()" type="text" class="form-control required" id="salario" placeholder="Enter Salary" name="salario" value="<?php echo $salario ?>" maxlength="16">
                     <label for="salario">Salário</label>
-                    <span id="validação"><i><u><?php if (strpos($msg, "salário") != false) {echo $msg;} ?></u></i></span>
+                    <span class="validação" style="display: none;">Salário inválido</span>
                 </div>
                 <div class="form-check mb-2">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" name="remember" required> Aceito os termos
+                        <input class="form-check-input required" type="checkbox" name="remember" onchange="ValidarCheck()"> Aceito os termos
+                        <span class="validação" style="display: none;">Aceite os termos</span>
                     </label>
                 </div>
                 <button type="submit" class="btn btn-dark">Cadastrar-se</button>
+                <?php
+                    echo $msg;
+                ?>
             </form>
         </div>
     </div>
@@ -226,6 +230,7 @@
         }
     </script>
 
+    <script src="./validação.js"></script>
 
 </body>
 
