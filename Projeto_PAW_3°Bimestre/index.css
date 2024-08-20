@@ -1,0 +1,104 @@
+.bg-blue{
+    background-color:#004899;
+}
+
+.bg-red{
+    background-color: #e30613;
+}
+
+.bg-gray{
+    background-color: rgb(53, 52, 52);
+}
+
+#validação{
+    color: rgb(255, 68, 68);
+}
+.sombra {
+    box-shadow: 1px 1px 50px black;
+    border-radius: 5px;
+}
+
+.bg-hover-color{
+    background-color: #ced4da75;
+}
+
+.postagem{
+    width: 35%;
+    margin-left: 25%;
+    border-radius: 5px;
+}
+
+.postagemSolo{
+    width: 75%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.user{
+    width: 35%; 
+    margin: auto;
+    border-radius: 10px;
+}
+
+.comentario{
+    width: 35%; 
+    
+    border-radius: 5px;
+}
+
+.fixarRodape{
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+}
+
+/* 
+    STYLES DA UNIVAP:
+    --primary-color: #004899;
+    --secondary-color: #e30613;
+    --primary-dark-color: #169fdb;
+    --secondary-dark-color: #e50046;
+    --hover-color: #50d7ff;
+    --font-family: Lato;
+    --font-family-secondary: Lato;
+    --font-base-rem: 14px;
+    --link-text-transform: initial;
+    --link-text-decoration: initial;
+    --link-font-weight: 700;
+    --btn--primary-height: 48px;
+    --btn--primary-border-radius: 4px;
+    --btn--primary-font-weight: 700;
+    --btn--primary-text-transform: uppercase;
+    --btn--primary-text-color: #e9faf9;
+    --btn--primary-dark-text-color: #e9faf9;
+    --btn--primary-border-style: initial;
+    --btn--primary-border-color: #000000;
+    --btn--primary-dark-border-color: #000000;
+    --btn--primary-border-width: 1px;
+    --btn--secondary-height: 48px;
+    --btn--secondary-border-radius: 4px;
+    --btn--secondary-font-weight: 700;
+    --btn--secondary-text-transform: uppercase;
+    --btn--secondary-text-color: #fff4f4;
+    --btn--secondary-dark-text-color: #1e1d31;
+    --btn--secondary-border-style: initial;
+    --btn--secondary-border-color: #000000;
+    --btn--secondary-dark-border-color: #000000;
+    --btn--secondary-border-width: 1px;
+    --input-size: 48px;
+    --input-border-radius: 4px;
+    --input-size: 48px;
+    --input-border-radius: 4px;
+    --card-border-radius: 4px;
+    --card-box-shadow: 0 6px 10px 0 rgba(0,0,0,0.08);
+    --card-background-color: #ffffff;
+    --card-dark-background-color: #1a2129;
+    --card-border-style: initial;
+    --card-border-color: #000000;
+    --card-dark-border-color: #000000;
+    --card-border-width: 1px;
+
+
+
+*/

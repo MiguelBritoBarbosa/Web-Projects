@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initialscale=1.0">
+    <title>Miguel Brito Barbosa</title>
+    <style type="text/css">
+      h1{
+        font-size: 52px;
+        font-family: calibri;
+      }
+      hr{
+        height: 6px;
+        background-color: black;
+      }
+      .input1{
+        width: 220px;
+        margin-right: 10px;
+    }
+    </style>
+  </head>
+  <body>
+    <h1 align="center">Alterações de raça de Animal</h1>
+    <hr>
+    <h3>Digite as alterações</h3>
+    
+    <form action="AlterarRaçasDestino.php" method="get">
+      <input type="number" name="IdRaçaAnimal" placeholder="Digite o id da raça a ser alterado" class="input1">
+      <br>
+      <br>
+      <input type="text" name="TipoRaçaAlterado" placeholder="Digite a raça do animal">
+      <br>
+      <br>
+      <input type="submit">
+    </form>
+
+    <br>
+    <a href="TabelaDeRaças.php">Tabela de raça de animais</a>
+    <br>
+    <br>
+    <a href="../PáginaPrincipal.html">Página Principal</a>
+  </body>
+</html>
