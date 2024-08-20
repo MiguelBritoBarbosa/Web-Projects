@@ -1,0 +1,1 @@
+# Instalar phpqrcode como dependencia do projeto
